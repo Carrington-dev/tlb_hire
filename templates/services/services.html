@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+<!--  -->
+{% load static %}
+<!--  -->
+
+<!--  -->
+{% block main %}
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Services</h2>
+            <ol>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Services</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services mt-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon-box">
+                    <i class="bi bi-briefcase"></i>
+                    <h4><a href="#">Maid Services</a></h4>
+                    <p>Once-off cleaning services for the house you’re leaving, or moving into. We assist in permanently placing a domestic worker in your home</p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-window"></i>
+                    <h4><a href="#">Window Cleaning</a></h4>
+                    <p>Window and Cleaning Crew specializes in the Interior and Exterior cleaning of windows for multi storey buildings, making use of Water Fed Telescopic poles which can reach 5 storeys high.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="icon-box">
+                    <i class="bi bi-house"></i>
+                    <h4><a href="#">Carpet Cleaning
+                    </a></h4>
+                    <p>Regular cleaning not only extend the lifespan of the carpet, it also enhances air quality inside the building, ensuring healthier occupants. We only make use of environmentally Friendly chemicals. </p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-card-checklist"></i>
+                    <h4><a href="#">Contract Cleaning</a></h4>
+                    <p>For large contracts, we supply a on-site supervisor, while for smaller contracts, a supervisor will be shared between sites. However, management always oversee all contracts and are fully up to date with all operations.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-bar-chart"></i>
+                    <h4><a href="#">Domestic Cleaning</a></h4>
+                    <p>New service now available! {{company}}, South Africa's favourite cleaning service in for your home has now moved into your office too. If your office is in need of a good one-time cleaning after the function or weekly cleans, then
+                        look no further. We will banish dust, grime and any kind of dirt from your workplace and keep it a clean and productive office environment.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-binoculars"></i>
+                    <h4><a href="#">Home Cleaning</a></h4>
+                    <p>
+                        Voted as South Africa’s most convenient home cleaning service, {{company}} has taken the country by storm with its innovative approach to the home cleaning industry. Allowing South Africans to book custom cleaning options and connecting them with trusted
+                        cleaners from their comfort of the own home has made us the go-to service for home cleaning
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-brightness-high"></i>
+                    <h4><a href="#">Regular Office Cleaning</a></h4>
+                    <p>Having a professional cleaning team come in regularly without disturbing your staff is what we at {{company}} specialise in. We will make sure that your office is clean at all times.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <i class="bi bi-calendar4-week"></i>
+                    <h4><a href="#">Once-Off Office Cleaning</a></h4>
+                    <p>Do you need a office cleaner to come in and clean the office after you had an event? Contact {{company}} Today for office cleaning.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Services Section -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Services</h2>
+            <p>Check our Services</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <ul class="nav nav-tabs flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Healthcare Cleaning
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-1">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Professional Medical Cleaning Services you can Trust! </h3>
+                                <p class="fst-italic">Pro 2 Clean knows how critical it is to maintain a clean, safe and healthy environment of care for both patients and staff members. That’s why we take a thorough approach to deliver the highest standards of cleaning every
+                                    time we enter a healthcare facility. From medical offices to hospitals, we have the proper tools and expertise to provide consistent results that address your specific needs.
+                                </p>
+                                <p>
+                                    We understand that cleaning your facility to the highest standard is the best way to prevent the spread of germs, bacteria, pathogens and viruses. We take great pride in never missing a day of service, so your business can do what it does best, and leave
+                                    the cleaning to </p>
+
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static '/img/features-1.svg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-2">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Commercial Cleaning</h3>
+                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                                <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto
+                                    madirna desera vafle de nideran pal</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static '/img/features-2.svg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-3">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                                <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                                <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam.
+                                    Soluta et harum voluptatem optio quae</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static '/img/features-3.svg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-4">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                                <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                                <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam
+                                    quia a laborum inventore</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static '/img/features-4.svg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-5">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                                <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="{% static '/img/features-5.svg' %}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Features Section -->
+{% endblock main %}

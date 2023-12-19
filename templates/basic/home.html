@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+<!--  -->
+{% load static %}
+<!--  -->
+{% block content %}
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('{% static 'img/slide/slide-1.jpg' %}')">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Welcome to <span>{{company}}</span></h2>
+                        <p class="animate__animated animate__fadeInUp">Providing Professional Exterior and Interior House Washing, and Office washing Through Soft Washing and use of Extremely Useful Tools and germ-free detergents
+                        </p>
+                        <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('{% static 'img/slide/slide-2.jpg' %}')">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Say goodbye to allergies in your bedroom
+                        </h2>
+                        <p class="animate__animated animate__fadeInUp">60% of dust mites in your home can be found in your bed. The {{company}} service brings hospital-grade hygiene and allergen removal to your home, so you and your family can breathe easy. .
+                        </p>
+                        <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('{% static 'img/slide/slide-3.jpg' %}')">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Keeping it fresh and clean</h2>
+                        <p class="animate__animated animate__fadeInUp">
+                            Our professional cleaning team will do all the cleaning, dusting, scrapping, scrubbing, mopping, sanitizing and polishing of all surfaces on newly built or renovated offices, factories or any commercial building.
+                        </p>
+                        <a href="{% url 'about' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section>
+
+
+{% endblock content %}
+
+<!--  -->
+
+{% block main %}
+<!-- ======= Featured Services Section ======= -->
+<section id="featured-services" class="featured-services mt-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-laptop"></i></div>
+                    <h4 class="title"><a href="">The Professional Cleaning</a></h4>
+                    <p class="description">{{ company }} Cleaning Services provide Professional Cleaning for your site, you never need to worry about whether or not we will do a good job. </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-card-checklist"></i></div>
+                    <h4 class="title"><a href="">TLB Hire</a></h4>
+                    <p class="description">When you hire {{ company }} Cleaning Services, you’re hiring a professional. One of the marks of a professional cleaning service is that we clean your home with a game</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-clipboard-data"></i></div>
+                    <h4 class="title"><a href="">Site Demolition</a></h4>
+                    <p class="description">Studies have shown cleaning with traditional cleaners can leave over 38 contaminants in the air. Green cleaning can reduce that to zero… instantly improving air...
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Featured Services Section -->
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about2">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{% static '/img/features-3.svg' %}" class="img-fluid" alt="" oncontextmenu="return false">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+                <h3>Our Objectives
+                </h3>
+                <p class="fst-italic">
+                    {{ company }}’s objectives for the first three years of operation include: </p>
+                <ul>
+                    <li><i class="bi bi-check-circle"></i> We will always provide the best equipment at the best rates.</li>
+                    <li><i class="bi bi-check-circle"></i> Building and maintaining strong relationships with our suppliers. </li>
+                    <li><i class="bi bi-check-circle"></i> We strive to maintain uncompromisingly high standards. </li>
+                    <li><i class="bi bi-check-circle"></i> Equipment of superior quality that caters to the needs of the construction industry. </li>
+                    <li><i class="bi bi-check-circle"></i> To provide competitive services to everyone in South Africa with no descrimiantion
+                    </li>
+                </ul>
+                <p>
+                    To simply connect homeowners, business owners and companies with trusted and well trained professional services at a decent price. </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End About Section -->
+
+
+
+
+{% endblock main %}

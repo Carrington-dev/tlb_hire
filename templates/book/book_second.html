@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+<!--  -->
+{% load static %}
+<!--  -->
+{% block main %}
+
+<!-- ======= Breadcrumbs ======= -->
+{% if form.errors %} {% for field in form %} {% for error in field.errors %}
+<div class="alert alert-danger">
+
+    <script>
+        alert("{{ error|escape }}")
+    </script>
+</div>
+{% endfor %} {% endfor %} {% endif %}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Contact</h2>
+            <ol>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Contact</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container">
+
+
+        <div class="row mt-5">
+
+            <div class="col-lg-4">
+                <div class="info">
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Location:</h4>
+                        <p>{{street}}, {{city}}, {{cc}} {{zip}}</p>
+                    </div>
+
+                    <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>info@trucleenservices.co.za</p>
+                    </div>
+
+                    <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Call:</h4>
+                        <p>+27 6765 0526 3 </p>
+                        <p>+276 710 66 600</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-8 mt-5 mt-lg-0">
+
+                <form action="{% url 'book_second' %}" method="post" role="form" class="php-email-form">
+                    {% csrf_token %}
+                    <!-- <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div> -->
+                    <!-- <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div> -->
+
+                    <div class="form-group mt-3">
+                        {{form.city.label}}
+                        <!--  -->
+                        {{form.city}}
+                        <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required> -->
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.from_time.label}}
+                        <!--  -->
+                        {{form.from_time}}
+                        <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required> -->
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.appointed_date.label}}
+                        <!--  -->
+                        <!-- {{form.appointed_date}} -->
+                        <input type="date" class="form-control" name="appointed_date" id="appointed_date" placeholder="{{form.appointed_date.label}}" required>
+                    </div>
+
+                    <!-- <div class="text-center"><button type="submit">Next</button></div> -->
+                    <div class="text-center"><button type="submit">Submit</button></div>
+                </form>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</section>
+<!-- End Contact Section -->
+
+
+{% endblock main %}
+
+<!--  -->
+{% block jstags %}
+<!--  -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $("#city_id").autocomplete({
+            source: "{% url 'autocomplete' %}",
+            minLength: 2
+        });
+    });
+
+    $(function() {
+        $("#from_id").autocomplete({
+            source: "{% url 'autocomplete2' %}",
+            minLength: 2
+        });
+    });
+</script>
+{% endblock jstags %}

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+<!--  -->
+{% load static %}
+<!--  -->
+
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>{{ service.subject }}</h2>
+            <ol>
+                <li><a href=".">Home</a></li>
+                <li><a href=".">Services</a></li>
+                <li>{{ service.subject }}</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Blog Single Section ======= -->
+<section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+            <div class="col-lg-8 entries">
+
+                <article class="entry entry-single">
+
+                    <div class="entry-img">
+                        <img src="{{ service.image.url }}" alt="" class="img-fluid">
+                    </div>
+
+                    <h2 class="entry-title">
+                        <a href="{{ service.get_absolute_url }}">{{ service.subject }}</a>
+                    </h2>
+
+                    <div class="entry-meta">
+                        <ul>
+                            <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href=".">Mr M N</a></li>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="."><time datetime="2020-01-01">{{ service.date_sent|date:"M d, Y" }}</time></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="entry-content">
+                        <p>
+                            {{ service.message|safe }}
+                        </p>
+                    </div>
+
+                    <div class="entry-footer">
+                        <i class="bi bi-folder"></i>
+                        <ul class="cats">
+                            <li><a href="{{ service.get_absolute_url }}">{{ service.subject }}</a></li>
+                        </ul>
+
+                        <i class="bi bi-tags"></i>
+                        <ul class="tags">
+
+                            {% for new_service in services %}
+                            <!--  -->
+                            {% if new_service != service %}
+
+                            <li><a href="{{ new_service.get_absolute_url }}">{{ new_service.subject }}</a></li>
+                            {% endif %}
+                            <!--  -->
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+
+                </article>
+                <!-- End blog entry -->
+
+
+            </div>
+            <!-- End blog entries list -->
+
+            <div class="col-lg-4">
+
+                <div class="sidebar">
+
+
+
+
+
+
+                    <h3 class="sidebar-title">Services</h3>
+                    <div class="sidebar-item tags">
+                        <ul>
+
+                            {% for nservice in services %}
+
+                            <li><a href="{{ nservice.get_absolute_url }}">{{ nservice.subject }}</a></li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+                    <!-- End sidebar tags-->
+
+                </div>
+                <!-- End sidebar -->
+
+            </div>
+            <!-- End blog sidebar -->
+
+        </div>
+
+    </div>
+</section>
+<!-- End Blog Single Section -->
+{% endblock content %}

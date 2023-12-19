@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+<!--  -->
+{% load static %}
+<!--  -->
+{% block main %}
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>About</h2>
+            <ol>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>About</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="row content">
+            <div class="col-lg-12">
+
+                <h2>{{ company }} Services</h2>
+                <h6>{{ company }} is a facility management company which provides services that are centred around cleaning (basic, luxury, commercial), security, horticulture, demolition and waste control. We offer quality services that facilitate a means
+                    of taking care of your indoor and outdoor facility needs. At {{ company }} we prioritise affordability for high quality services and ensure that we provide an allencompassing platform that will operate as your one-stop shop for all
+                    of your facility needs accessible at the tip of your fingers</h6>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="row content">
+            <div class="col-lg-6">
+                <img src="{% static '/img/features-3.svg' %}" class="img-fluid" alt="" oncontextmenu="return false">
+
+
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+                <p>
+                    At {{ company }}, we’re committed to providing the highest quality of our services available by exceeding the expectations of our clients. It is our wish to create and maintain prosperous and enjoyable environments where performance can thrive. We place
+                    value on the human aspect of our brand and we base our success on our ability to see our clients, not as numbers, prospects or jobs; but as people.
+                </p>
+                <ul>
+                    <li><i class="ri-check-double-line"></i> To train and give accreditation to more than 100 workers in the facility/hospitaility sector.</li>
+                    <li><i class="ri-check-double-line"></i> To have an app that operates on both android and IOS for both workers and clients. </li>
+                    <li><i class="ri-check-double-line"></i> To create a service based company whose #1 goal is exceeding customer's expectations. </li>
+                    <li><i class="ri-check-double-line"></i> To increase our number of clients served by 20% per year through superior service. </li>
+                    <li><i class="ri-check-double-line"></i> To produce in-house produced cleaning and landscaping products.</li>
+                </ul>
+                <p class="fst-italic">
+                    With a positive and proactive approach, {{company}} Services partners with clients, identifying their unique needs to develop a comprehensive and customized cleaning solution, which is constantly scrutinized, tweaked and adapted as required in our perpetual
+                    endeavor to exceed expectations. </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End About Section -->
+
+<section id="featured-services" class="featured-services my-3">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-6 my-3">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-laptop"></i></div>
+                    <h4 class="title"><a href="">Best Practice</a></h4>
+                    <p class="description">We’re happy to be judged on our performance so we can maintain the highest level of accreditation certification. Our goal is to lead by example and maintain the best practices and highest standards in the market. </p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 mt-4 mt-md-0 my-3">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-card-checklist"></i></div>
+                    <h4 class="title"><a href="">Support</a></h4>
+                    <p class="description">We believe real time reporting is a fundamental requirement when it comes to servicing our client’s needs. Because of this, it’s important to ensure we are aware of real time site activity. All site audits and communications are run
+                        through our system and uploaded into the database and APP to allow both cleaning operatives, clients and {{ company }}support staff to review and monitor the quality and safety experienced on site in real time</p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 mt-4 mt-lg-0 my-3">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-clipboard-data"></i></div>
+                    <h4 class="title"><a href="">Operational Excellence</a></h4>
+                    <p class="description"> We understand the challenges to maintain consistent quality in dynamic environments. This is why we have developed an operations excellence model to ensure, be it a cleaning service person or a customer service manager, our people
+                        understand their roles and responsibilities across a multi-layered service structure to mitigate risk, ensure quality and provide peace of mind at all times
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 mt-4 mt-lg-0 my-3">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-sun"></i></div>
+                    <h4 class="title"><a href="">Empowerment</a></h4>
+                    <p class="description"> At {{ company }}, we consider it our responsibility to provide support and valuable contributions to the quality of peoples’ lives beyond the scope of our operations. The role that a clean, safe and hygienic environment plays in making
+                        people happy cannot be underestimated. We also believe in improving or staffs skills to ensure updated services
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 mt-4 mt-lg-0 my-3">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-safe"></i></div>
+                    <h4 class="title"><a href="">Protect</a></h4>
+                    <p class="description"> {{ company }}'s policy promotes a zero harm and injury free work environment. This policy is applied at contract level through trained service provides operatives. Our belief is that your employees, patients, clients, students and
+                        other visitors all deserve a clean and safe environment to operate within</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock main %}

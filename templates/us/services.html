@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+<!--  -->
+{% load static %}
+<!--  -->
+
+{% block main %}
+<!--  -->
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static '/img/breadcrumbs-bg.jpg' %}');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Services</h2>
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Services</li>
+        </ol>
+
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Services Section ======= -->
+{% if services %}
+
+<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+            {% for service in services %}
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item  position-relative">
+                    <div class="icon">
+                        <i class="fa-solid fa-mountain-city"></i>
+                    </div>
+                    <h3>{{ service.subject }}</h3>
+                    <p>{{ service.message|truncatechars:"150" }}</p>
+                    <a href="{{ service.get_absolute_url }}" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+
+
+            <!-- End Service Item -->
+
+
+
+        </div>
+
+    </div>
+</section>
+{% else %}
+<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+
+            <div class="col-lg-12 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item  position-relative">
+                    <div class="icon">
+                        <i class="fa-solid fa-mountain-city"></i>
+                    </div>
+                    <h3>No services found</h3>
+                    <p>Please be patient we are still uploading our services, come back shortly.</p>
+                    <a href="{% url 'about' %}" class="readmore stretched-link">About <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+
+            <!-- End Service Item -->
+
+
+
+        </div>
+
+    </div>
+</section>
+{% endif %}
+<!-- End Services Section -->
+
+
+{% endblock main %}
